@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <script src="https://kit.fontawesome.com/2b9a5d9540.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,700,0,-50..200" />
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- =============== NAV =============== -->
+    <header>
+        <nav class="cabecalho">
+            <div class="nav__left">
+                <i class="fa-solid fa-bars icone"></i>
+                <i class="material-symbols-outlined icone">home</i>
+                <div class="search">
+                    <input type="text" class="input-busca" placeholder="Buscar">
+                    <i class="fa-solid fa-magnifying-glass icone icone-busca"></i>
+                </div>
+            </div>
+
+            <div class="nav__right">
+                <i class="fa-solid fa-plus icone"></i>
+                <i class="material-symbols-outlined icone">help</i>
+                <i class="fa-regular fa-bell icone"></i>
+                <div class="profile-picture"><img src="images/generic-prof-pic.png"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- =============== MENU =============== -->
+        <div class="menu">
+            <ul class="categorias">
+                <li class="categoria-ativa"><i class="fa-solid fa-inbox"></i>Entrada</li>
+                <li><i class="fa-regular fa-calendar"></i>Hoje</li>
+                <li><i class="fa-solid fa-calendar-days"></i>Em breve</li>
+            </ul>
+
+            <div class="projetos">
+                <div class="projetos-dropdown">
+                    <i class="fa-solid fa-chevron-down"></i>
+                    <h4>Categorias</h4>
+                </div>
+                <ul class="projetos-list">
+                    <li><i class="fa-solid fa-circle"></i>pessoal</li>
+                </ul>
+            </div>
+        </div>
+        <!-- =============== TAREFAS =============== -->
+        <div class="tarefas">
+
+            <!-- Titulo da categoria -->
+            <div class="tarefas__cabecalho">
+                <h3>Entrada</h3>
+                <i class="fa-solid fa-ellipsis"></i>
+            </div>
+
+            <!-- Div que irá conter as tarefas armazenadas no localstorage -->
+            <div class="tarefas-display">
+
+            </div>
+
+            <!-- Botão para adicionar tarefa -->
+            <div class="tarefas-addButton">
+                <i class="fa-solid fa-plus"></i>
+                <p>Adicionar tarefa</p>
+            </div>
+
+            <!-- Imagem que irá aparecer caso não hajam tarefas -->
+            <div class="sem-tarefas">
+                <img src="images/undraw_pilates_gpdb.png" alt="">
+                <p>Sem tarefas no momento</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

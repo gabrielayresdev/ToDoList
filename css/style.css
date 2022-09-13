@@ -1,0 +1,262 @@
+:root {
+
+    --branco: #FFFFFF;
+    --branco-transparente: #FFFFFF33;
+    --cabecalho-vermelho: #DB4C3F;
+
+    --texto-principal: #202020;
+    --texto-secundario: #1a1a1a;
+    --texto-terciario: #808080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    border: none;
+
+    transition: .5s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* =============== HEADER =============== */
+
+.cabecalho {
+    background: var(--cabecalho-vermelho);
+    padding: 10px 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--branco);
+}
+
+.nav__left,
+.nav__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+.icone {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icone:hover {
+    background: var(--branco-transparente);
+}
+
+.search {
+    position: relative;
+}
+
+.input-busca {
+    padding: 10px 0 10px 34px;
+    border-radius: 3px;
+    background: var(--branco-transparente);
+
+    font-size: 13px;
+    font-weight: 100;
+
+    color: var(--branco);
+}
+
+.input-busca::placeholder {
+    color: var(--branco);
+}
+
+.icone-busca {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.icone-busca:hover {
+    background: var(--branco-transparente);
+}
+
+.search:hover .input-busca,
+.search:active .input-busca {
+    background-color: var(--branco);
+    color: black;
+}
+
+.search:hover .icone-busca,
+.search:active .icone-busca {
+    color: black;
+}
+
+.search:hover .input-busca::placeholder,
+.search:active .input-busca::placeholder {
+    color: black;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 16px;
+}
+
+.profile-picture {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* =============== MENU =============== */
+
+main {
+    display: flex;
+
+    flex-grow: 1;
+}
+
+.menu {
+    padding: 3% 0 0 35px;
+    width: 17vw;
+    background: #FAFAFA;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+}
+
+.categorias li {
+    padding: 12px 0 12px 12px;
+    margin-right: 12px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+.categorias i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.fa-inbox {
+    color: #246fe0;
+}
+
+.fa-calendar {
+    color: #058527;
+}
+
+.fa-calendar-days {
+    color: #692fc2;
+}
+
+.projetos-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    font-size: 18px;
+    color: var(--texto-secundario);
+
+}
+
+.projetos-dropdown h4 {
+    font-weight: 400;
+}
+
+.projetos-list li {
+    padding: 12px 0 12px 12px;
+    margin-right: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.projetos-list li i {
+    margin-right: 10px;
+    font-size: 20px;
+    font-size: 8px;
+    color: mediumaquamarine;
+}
+
+.categoria-ativa {
+    background: #EEEEEE;
+}
+
+/* =============== TAREFAS =============== */
+
+.tarefas {
+    width: 40vw;
+    margin: 3em auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarefas .tarefas__cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--texto-principal);
+}
+
+.tarefas .tarefas__cabecalho i {
+    font-size: 25px;
+}
+
+.tarefas-addButton {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--texto-terciario);
+
+    cursor: pointer;
+}
+
+.tarefas-addButton i {
+    color: var(--cabecalho-vermelho);
+}
+
+.sem-tarefas {
+    text-align: center;
+    color: var(--texto-terciario);
+}
+
+.sem-tarefas img {
+    width: 50%;
+    margin: 0 auto;
+}
