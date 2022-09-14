@@ -63,32 +63,56 @@
             </div>
         </div>
         <!-- =============== TAREFAS =============== -->
-        <div class="tarefas">
+        <div class="on-display">
+            <div class="tarefas_entrada">
+                <!-- Titulo da categoria -->
+                <div class="tarefas__cabecalho">
+                    <h3>Entrada</h3>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <!-- Div que irá conter as tarefas armazenadas no localstorage -->
+                <div class="tarefas-display">
+                    <ul class="tarefas">
+                        <li class="tarefa">
+                            <input type="radio" class="check">
+                            <h4>Conferência às 15:00 de amanhã</h4>
+                            <p>Zoom</p>
+                            <p>22/09/2022</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Botão para adicionar tarefa -->
+                <div class="tarefas-addButton">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Adicionar tarefa</p>
+                </div>
 
-            <!-- Titulo da categoria -->
-            <div class="tarefas__cabecalho">
-                <h3>Entrada</h3>
-                <i class="fa-solid fa-ellipsis"></i>
-            </div>
-
-            <!-- Div que irá conter as tarefas armazenadas no localstorage -->
-            <div class="tarefas-display">
-
-            </div>
-
-            <!-- Botão para adicionar tarefa -->
-            <div class="tarefas-addButton">
-                <i class="fa-solid fa-plus"></i>
-                <p>Adicionar tarefa</p>
-            </div>
-
-            <!-- Imagem que irá aparecer caso não hajam tarefas -->
-            <div class="sem-tarefas">
-                <img src="images/undraw_pilates_gpdb.png" alt="">
-                <p>Sem tarefas no momento</p>
+                <!-- Form pra adicionar tarefa -->
+                <div class="container invisivel">
+                    <div class="tarefa-form">
+                        <input type="text" placeholder="ex: Comprar presentes amanhã às 18:00">
+                        <textarea rows="2" placeholder="Descrição"></textarea>
+                        <span>
+                            <input type="date" id="date">
+                            <button class="select-categoria"><i class="fa-solid fa-inbox"></i>Entrada</button>
+                        </span>
+                        <span>
+                            <i class="fa-regular fa-flag icone"></i>
+                            <i class="fa-regular fa-bell icone"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- Imagem que irá aparecer caso não hajam tarefas -->
+                <div class="sem-tarefas">
+                    <img src="images/undraw_pilates_gpdb.png" alt="">
+                    <p>Sem tarefas no momento</p>
+                </div>
             </div>
         </div>
     </main>
+    <script src="js/main.js"></script>
+    <script src="js/AdicionarTarefa.js"></script>
+    <script src="js/menuLateral.js"></script>
 </body>
 
 </html>

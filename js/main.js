@@ -5,5 +5,13 @@
         "data": formatData(13/09/2022),
         "categoria": "Hoje",
         "favorito:" false,
+        "done": false
     }
 */
+
+const tarefas = document.querySelectorAll(".tarefa")
+const bannerSemTarefas = document.querySelector(".sem-tarefas")
+
+if (tarefas.length > 0) {
+    bannerSemTarefas.classList.add("invisivel")
+}
