@@ -1,0 +1,290 @@
+/* =============== TAREFAS =============== */
+
+.on-display {
+    position: absolute;
+    left: 17vw;
+    width: 83vw;
+    height: 100%;
+}
+
+.entrada {
+    width: 40vw;
+    margin: 3em auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transition: .5s;
+}
+
+.entrada .entrada__cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--texto-principal);
+}
+
+.entrada .entrada__cabecalho i {
+    font-size: 25px;
+}
+
+.tarefasAdd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--texto-terciario);
+
+    cursor: pointer;
+}
+
+.tarefasAdd i {
+    color: var(--cabecalho-vermelho);
+}
+
+/* tarefas lista */
+
+.tarefas li {
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 5px;
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #80808050;
+}
+
+.tarefas .check {
+
+    width: 1.3em;
+    height: 1.3em;
+    background: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    grid-row: span 3;
+    grid-column: span 1;
+}
+
+.tarefas .check:checked {
+    background: #0080ff;
+}
+
+.tarefas h4 {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tarefas p {
+    color: var(--texto-terciario);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tarefa__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarefa__footer i {
+    margin-right: 5px;
+}
+
+/* Form da tarefa */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+.tarefa-form {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.tarefa-form input[type="text"] {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--texto-principal);
+}
+
+.tarefa-form textarea {
+    width: 100%;
+}
+
+.tarefa-form input,
+.tarefa-form textarea {
+    grid-column: span 2;
+}
+
+.tarefa-form input::placeholder,
+.tarefa-form textarea::placeholder {
+    font-size: 14px;
+    color: var(--texto-terciario);
+    font-weight: 500;
+}
+
+/* Data */
+input[type="date"] {
+    background-color: #0080ff;
+    padding: 3px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 27px;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.buttons-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button.cancelar {
+    background: #F5F5F5;
+    padding: 6px;
+    font-weight: 700;
+    height: auto;
+    border: 1px solid #bbb;
+    color: #1a1a1a;
+}
+
+button.cancelar:hover {
+    background: #e5e5e5;
+}
+
+button.confirmar {
+    background: #DB4C3F;
+    padding: 6px;
+    font-weight: 700;
+    height: auto;
+    border: 1px solid #bbb;
+    color: white;
+}
+
+button.confirmar:hover {
+    background: #ff4f3f;
+}
+
+#date {
+    height: 27px;
+    margin-right: 10px;
+}
+
+/* Select */
+.btn {
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--texto-terciario);
+    padding: 5px;
+    cursor: pointer;
+    height: 27px;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+/*  */
+
+.grupos-select {
+    position: relative;
+}
+
+.options {
+    width: 100%;
+    max-height: 100px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    z-index: 10;
+
+    background: #fff;
+}
+
+.option {
+    width: 100%;
+    border-bottom: 1px solid #bbb;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--texto-terciario);
+}
+
+.option:hover {
+    background: #ddd;
+}
+
+.option i {
+    margin-right: 5px;
+}
+
+/*  */
+
+
+.entrada .sem-tarefas {
+    text-align: center;
+    color: var(--texto-terciario);
+}
+
+.sem-tarefas img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+/* Outs */
+
+.out-left {
+    left: -100vw;
+    transition: .5s;
+}
+
+.center-display {
+    left: 0;
+    transition: .5s;
+    width: 100vw;
+}
+
+.invisivel {
+    display: none;
+}

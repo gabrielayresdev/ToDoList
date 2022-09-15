@@ -1,0 +1,119 @@
+/* =============== HEADER =============== */
+
+.cabecalho {
+    background: var(--cabecalho-vermelho);
+    padding: 10px 2%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: var(--branco);
+}
+
+.cabecalho__left,
+.cabecalho__right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 16px;
+}
+
+.header__icone {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header__icone:hover {
+    background: var(--branco-transparente);
+}
+
+.search {
+    position: relative;
+}
+
+.input-busca {
+    padding: 10px 0 10px 34px;
+    border-radius: 3px;
+    background: var(--branco-transparente);
+
+    font-size: 13px;
+    font-weight: 100;
+
+    color: var(--branco);
+}
+
+.input-busca::placeholder {
+    color: var(--branco);
+}
+
+.icone-busca {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.icone-busca:hover {
+    background: var(--branco-transparente);
+}
+
+.search:hover .input-busca,
+.search:active .input-busca {
+    background-color: var(--branco);
+    color: black;
+}
+
+.search:hover .icone-busca,
+.search:active .icone-busca {
+    color: black;
+}
+
+.search:hover .input-busca::placeholder,
+.search:active .input-busca::placeholder {
+    color: black;
+}
+
+.cabecalho__right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-size: 16px;
+}
+
+.profile-picture {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Outs */
+
+.out-left {
+    left: -100vw;
+    transition: .5s;
+}
+
+.center-display {
+    left: 0;
+    transition: .5s;
+    width: 100vw;
+}
+
+.invisivel {
+    display: none;
+}

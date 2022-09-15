@@ -1,0 +1,83 @@
+/* =============== MENU =============== */
+
+.menu {
+    padding: 3% 0 0 35px;
+    width: 17vw;
+    height: 100%;
+    background: #FAFAFA;
+
+    position: absolute;
+    left: 0;
+}
+
+/* Apenas pra centralizar as listas */
+.menu ul li {
+    display: flex;
+    align-items: center;
+}
+
+.grupos {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupos li {
+    padding: 12px 0 12px 12px;
+    margin-right: 12px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+.grupos i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.fa-inbox {
+    color: #246fe0;
+}
+
+.fa-calendar {
+    color: #058527;
+}
+
+.fa-calendar-days {
+    color: #692fc2;
+}
+
+.categorias-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    font-size: 18px;
+    color: var(--texto-secundario);
+
+    cursor: pointer;
+}
+
+.categorias-dropdown h4 {
+    font-weight: 400;
+}
+
+.categorias__lista li {
+    padding: 12px 0 12px 12px;
+    margin-right: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.categorias__lista li i {
+    margin-right: 10px;
+    font-size: 8px;
+    color: mediumaquamarine;
+}
+
+.grupo-ativo {
+    background: #EEEEEE;
+}
