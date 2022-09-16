@@ -1,3 +1,6 @@
+const lista = JSON.parse(localStorage.getItem("tarefas")) || []
+existemTarefas()
+
 const addTarefaBtn = document.querySelector(".tarefasAdd")
 const addTarefaBtnHeader = document.querySelector(".fa-plus")
 
@@ -19,35 +22,51 @@ addTarefaBtnHeader.addEventListener("click", () => {
 cancelaBtn.addEventListener("click", () => {
     limpaForm()
 
-    form.classList.add("invisivel")
-    addTarefaBtn.classList.remove("invisivel")
+    fechaForm()
 })
 
 /* Adição de tarefas */
 confirmaBtn.addEventListener("click", function () {
-    console.log("Oi")
     const nome = form.querySelector(`input[type=text]`).value
     const descricao = form.querySelector("textarea").value
     const data = form.querySelector("input[type=date]").value
-    const categoria = form.querySelector(".opcao-selecionada").textContent
+    const categoria = form.querySelector(".opcao-selecionada").childNodes[1].textContent
+    const iconeCategoria = form.querySelector(`[data-categoria="${categoria}"]`)
+    const prioridade = form.querySelector(".flagBtn").childNodes[0].getAttribute('data-value')
+
+    console.log(iconeCategoria)
 
     const tarefa = {
         "nome": nome,
         "descricao": descricao,
         "data": data,
         "categoria": categoria,
-        "favorito": false,
+        "prioridade": prioridade,
         "done": false
     }
-    console.log(tarefa)
 
-    criaTarefa(tarefa, form.querySelector(".opcao-selecionada").querySelector("i"))
+    if (formIncompleto(tarefa)) {
+        console.log("incompleto")
+    } else {
+        criaTarefa(tarefa, iconeCategoria)
+        lista.push(tarefa)
+        localStorage.setItem("tarefas", JSON.stringify(lista))
+        existemTarefas()
+        fechaForm()
+    }
+
 })
 
 function ativaForm() {
-    const form = document.querySelector(".container")
-    form.classList.remove("invisivel")
+    const formContainer = document.querySelector(".container")
+    formContainer.classList.remove("invisivel")
     addTarefaBtn.classList.add("invisivel")
+}
+
+function fechaForm() {
+    const formContainer = document.querySelector(".container")
+    formContainer.classList.add("invisivel")
+    addTarefaBtn.classList.remove("invisivel")
 }
 
 function criaTarefa(tarefa, icone) {
@@ -86,7 +105,7 @@ function criaTarefa(tarefa, icone) {
     dataP.innerHTML = formataData(tarefa.data)
 
     const span = document.createElement("span")
-    span.appendChild(icone)
+    span.appendChild(icone.cloneNode())
     span.innerHTML += tarefa.categoria
 
     tarefa__footer.appendChild(dataP)
@@ -100,9 +119,9 @@ function criaTarefa(tarefa, icone) {
 
     /* !ALERTA DE GAMBIARRA */
     /* VOCÊ FOI AVISADO */
-    opcaoSelecionada.innerHTML = ""
+    /* opcaoSelecionada.innerHTML = ""
     opcaoSelecionada.appendChild(icone)
-    opcaoSelecionada.innerHTML += "Entrada"
+    opcaoSelecionada.innerHTML += "Entrada" */
 
     tarefasList.appendChild(li)
     limpaForm()
@@ -135,3 +154,9 @@ function formataData(data) {
     const dataFormatada = `${dia}/${mes}/${ano}`
     return dataFormatada
 }
+
+
+lista.forEach(function (tarefa) {
+    criaTarefa(tarefa, document.querySelector(`[data-categoria="${tarefa.categoria}"]`))
+
+})

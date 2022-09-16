@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 
 <body>
@@ -83,17 +84,7 @@
 
                 <!-- Div que irá conter as tarefas armazenadas no localstorage -->
                 <ul class="tarefas">
-                    <li class="tarefa">
-                        <input type="checkbox" class="check" />
-                        <h4>Conferência às 15:00 de amanhã</h4>
-                        <p>Zoom</p>
-                        <div class="tarefa__footer">
-                            <p>22/09/2022</p>
-                            <span>
-                                <i class="fa-solid fa-inbox"></i>Entrada
-                            </span>
-                        </div>
-                    </li>
+
                 </ul>
 
                 <!-- Botão para adicionar tarefa -->
@@ -109,19 +100,28 @@
                         <textarea rows="2" placeholder="Descrição"></textarea>
                         <span class="grupos-select">
                             <input type="date" id="date">
-                            <span class="btn opcao-selecionada">
-                                <i class="fa-solid fa-inbox"></i>Entrada
-                            </span>
+                            <span class="btn opcao-selecionada"><i class="fa-solid fa-inbox"
+                                    data-categoria="Entrada"></i>Entrada</span>
                             <ul class="options invisivel">
-                                <li class="option"><i class="fa-solid fa-inbox"></i>Entrada</li>
-                                <li class="option"><i class="fa-solid fa-circle"
+                                <li class="option"><i class="fa-solid fa-inbox" data-categoria="Entrada"></i>Entrada
+                                </li>
+                                <li class="option"><i class="fa-solid fa-circle" data-categoria="pessoal"
                                         style="color: rgb(241, 50, 50);"></i>pessoal</li>
-                                <li class="option"><i class="fa-solid fa-circle"
+                                <li class="option"><i class="fa-solid fa-circle" data-categoria="Trabalho"
                                         style="color: rgb(57, 185, 179);"></i>Trabalho</li>
                             </ul>
                         </span>
-                        <span>
-                            <i class="fa-regular fa-flag header__icone"></i>
+                        <span class="prioridade-select">
+                            <div class="flagBtn"><i class="fa-regular fa-flag header__icone" data-value="0"></i></div>
+                            <div class="flags invisivel">
+                                <i class="fa-solid fa-flag header__icone" data-value="3"
+                                    style="color: rgb(221, 49, 49);"></i>
+                                <i class="fa-solid fa-flag header__icone" data-value="2"
+                                    style="color: rgb(66, 231, 66);"></i>
+                                <i class="fa-solid fa-flag header__icone" data-value="1"
+                                    style="color: rgb(0, 140, 255);"></i>
+                                <i class="fa-regular fa-flag header__icone" data-value="0"></i>
+                            </div>
                             <i class="fa-regular fa-bell header__icone"></i>
                         </span>
                     </div>
@@ -139,9 +139,11 @@
         </div>
     </main>
     <script src="js/main.js"></script>
-    <script src="js/AdicionarTarefa.js"></script>
-    <script src="js/menuLateral.js"></script>
     <script src="js/selectGrupo.js"></script>
+    <script src="js/menuLateral.js"></script>
+    <script src="js/selectPrioridade.js"></script>
+    <script src="js/tratamentoDeErros.js"></script>
+    <script src="js/AdicionarTarefa.js"></script>
 </body>
 
 </html>

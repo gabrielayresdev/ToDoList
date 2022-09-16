@@ -12,14 +12,14 @@ options.forEach(function (option) {
         const nome = this.textContent
 
         opcaoSelecionada.innerHTML = ""
-        opcaoSelecionada.appendChild(icone)
+        opcaoSelecionada.appendChild(icone.cloneNode())
         opcaoSelecionada.innerHTML += nome
 
         /* !ALERTA DE GAMBIARRA */
         /* VOCÊ FOI AVISADO */
-        this.innerHTML = ""
-        this.appendChild(icone)
-        this.innerHTML += nome
+        /*         this.innerHTML = ""
+                this.appendChild(icone)
+                this.innerHTML += nome */
 
         optionsBox.classList.add("invisivel")
     })

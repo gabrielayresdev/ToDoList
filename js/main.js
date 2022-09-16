@@ -9,9 +9,13 @@
     }
 */
 
-const tarefas = document.querySelectorAll(".tarefa")
+/* const tarefas = document.querySelectorAll(".tarefa") */
 const bannerSemTarefas = document.querySelector(".sem-tarefas")
 
-if (tarefas.length > 0) {
-    bannerSemTarefas.classList.add("invisivel")
+function existemTarefas() {
+    if (lista.length > 0) {
+        bannerSemTarefas.classList.add("invisivel")
+    } else {
+        bannerSemTarefas.classList.remove("invisivel")
+    }
 }

@@ -1,0 +1,149 @@
+/* Form da tarefa */
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+.tarefa-form {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    padding: 10px;
+
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.tarefa-form input[type="text"] {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--texto-principal);
+}
+
+.tarefa-form textarea {
+    width: 100%;
+}
+
+.tarefa-form input,
+.tarefa-form textarea {
+    grid-column: span 2;
+}
+
+.tarefa-form input::placeholder,
+.tarefa-form textarea::placeholder {
+    font-size: 14px;
+    color: var(--texto-terciario);
+    font-weight: 500;
+}
+
+/* Data */
+input[type="date"] {
+    background-color: #0080ff;
+    padding: 3px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 27px;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #ffffff;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.prioridade-select {
+    position: relative;
+    display: flex;
+}
+
+.flags {
+    position: absolute;
+    padding: 3px 5px;
+    display: flex;
+    gap: 5px;
+
+    top: 110%;
+    left: -5%;
+
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background: #fff;
+
+    z-index: 4;
+}
+
+.flags .fa-flag:hover {
+    background: #ddd;
+}
+
+
+.buttons-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button.cancelar {
+    background: #F5F5F5;
+    padding: 6px;
+    font-weight: 700;
+    height: auto;
+    border: 1px solid #bbb;
+    color: #1a1a1a;
+}
+
+button.cancelar:hover {
+    background: #e5e5e5;
+}
+
+button.confirmar {
+    background: #DB4C3F;
+    padding: 6px;
+    font-weight: 700;
+    height: auto;
+    border: 1px solid #bbb;
+    color: white;
+}
+
+button.confirmar:hover {
+    background: #ff4f3f;
+}
+
+#date {
+    height: 27px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+/* Outs */
+
+.out-left {
+    left: -100vw;
+    transition: .5s;
+}
+
+.center-display {
+    left: 0;
+    transition: .5s;
+    width: 100vw;
+}
+
+.invisivel {
+    display: none;
+}
