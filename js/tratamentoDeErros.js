@@ -1,5 +1,5 @@
 function formIncompleto(tarefa) {
-    if (tarefa.nome.length === undefined || tarefa.data === "") {
+    if (tarefa.nome.length === 0 || tarefa.data === "//") {
         console.log("Incompleto")
         return true
     } else if (existe(tarefa)) {
