@@ -77,10 +77,31 @@
     background: #0080ff;
 }
 
+.tarefa__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .tarefas h4 {
     color: var(--texto-secundario);
     font-size: 16px;
     font-weight: 400;
+}
+
+.tarefas .delete {
+    padding: 5px;
+    align-self: center;
+    border-radius: 3px;
+
+    font-size: 15px;
+    color: var(--cabecalho-vermelho);
+
+    cursor: pointer;
+}
+
+.tarefas .delete:hover {
+    background: #ddd;
 }
 
 .tarefas p {

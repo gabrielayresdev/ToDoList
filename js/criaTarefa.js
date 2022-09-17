@@ -1,10 +1,7 @@
 const lista = JSON.parse(localStorage.getItem("tarefas")) || []
 existemTarefas()
 
-const addTarefaBtn = document.querySelector(".tarefasAdd")
-const addTarefaBtnHeader = document.querySelector(".fa-plus")
 
-const cancelaBtn = document.querySelector(".cancelar")
 const confirmaBtn = document.querySelector(".confirmar")
 
 const form = document.querySelector(".tarefa-form")
@@ -34,20 +31,18 @@ confirmaBtn.addEventListener("click", function () {
     const iconeCategoria = form.querySelector(`[data-categoria="${categoria}"]`)
     const prioridade = form.querySelector(".flagBtn").childNodes[0].getAttribute('data-value')
 
-    console.log(iconeCategoria)
 
     const tarefa = {
+        "id": lista.length > 0 ? lista[lista.length - 1].id + 1 : 0,
         "nome": nome,
         "descricao": descricao,
-        "data": data,
+        "data": formataData(data),
         "categoria": categoria,
         "prioridade": prioridade,
         "done": false
     }
 
-    if (formIncompleto(tarefa)) {
-        console.log("incompleto")
-    } else {
+    if (!formIncompleto(tarefa)) {
         criaTarefa(tarefa, iconeCategoria)
         lista.push(tarefa)
         localStorage.setItem("tarefas", JSON.stringify(lista))
@@ -57,23 +52,14 @@ confirmaBtn.addEventListener("click", function () {
 
 })
 
-function ativaForm() {
-    const formContainer = document.querySelector(".container")
-    formContainer.classList.remove("invisivel")
-    addTarefaBtn.classList.add("invisivel")
-}
-
-function fechaForm() {
-    const formContainer = document.querySelector(".container")
-    formContainer.classList.add("invisivel")
-    addTarefaBtn.classList.remove("invisivel")
-}
-
 function criaTarefa(tarefa, icone) {
     /*                  
                     <li class="tarefa">
                         <input type="checkbox" class="check" />
-                        <h4>Conferência às 15:00 de amanhã</h4>
+                        <div class="tarefa__header">
+                            <h4>Conferência às 15:00 de amanhã</h4>
+                            <i class="fa-regular fa-trash delete"></i>
+                        </div>
                         <p>Zoom</p>
                         <div class="tarefa__footer">
                             <p>22/09/2022</p>
@@ -87,22 +73,45 @@ function criaTarefa(tarefa, icone) {
 
     const li = document.createElement("li")
     li.classList.add("tarefa")
+    li.dataset.id = tarefa.id
+
+    /* Linha 1,2,3, coluna 1 */
 
     const radio = document.createElement("input")
     radio.setAttribute("type", "checkbox");
     radio.classList.add("check")
 
+    /* Linha 1, Colunar 2 */
+
+    const tarefa__header = document.createElement("div")
+    tarefa__header.classList.add("tarefa__header")
+
     const h4 = document.createElement("h4")
     h4.innerHTML = tarefa.nome
 
+    const lixeira = document.createElement("i")
+    lixeira.classList.add("fa-solid", "fa-trash", "delete")
+
+    /* Funcionalidade de apagar a tarefa */
+    lixeira.addEventListener("click", function (event) {
+        apagaTarefa(event.target, tarefa)
+    })
+
+    tarefa__header.appendChild(h4)
+    tarefa__header.appendChild(lixeira)
+
+    /* Linha 2, coluna 2 */
+
     const descricaoP = document.createElement("p")
     descricaoP.innerHTML = tarefa.descricao
+
+    /* Linha 3, colunar 2 */
 
     const tarefa__footer = document.createElement("div")
     tarefa__footer.classList.add("tarefa__footer")
 
     const dataP = document.createElement("p")
-    dataP.innerHTML = formataData(tarefa.data)
+    dataP.innerHTML = tarefa.data
 
     const span = document.createElement("span")
     span.appendChild(icone.cloneNode())
@@ -112,16 +121,10 @@ function criaTarefa(tarefa, icone) {
     tarefa__footer.appendChild(span)
 
     li.appendChild(radio)
-    li.appendChild(h4)
+    li.appendChild(tarefa__header)
     li.appendChild(descricaoP)
     li.appendChild(tarefa__footer)
 
-
-    /* !ALERTA DE GAMBIARRA */
-    /* VOCÊ FOI AVISADO */
-    /* opcaoSelecionada.innerHTML = ""
-    opcaoSelecionada.appendChild(icone)
-    opcaoSelecionada.innerHTML += "Entrada" */
 
     tarefasList.appendChild(li)
     limpaForm()
@@ -134,27 +137,6 @@ function criaTarefa(tarefa, icone) {
         </li>
     */
 }
-
-function limpaForm() {
-    const entradas = form.querySelectorAll("input")
-    const textArea = form.querySelector("textarea")
-
-    entradas.forEach(function (entrada) {
-        entrada.value = ""
-    })
-    textArea.value = ""
-}
-
-function formataData(data) {
-    /* YYYY-MM-DD */
-    const ano = data.slice(0, 4)
-    const mes = data.slice(5, 7)
-    const dia = data.slice(8, 10)
-
-    const dataFormatada = `${dia}/${mes}/${ano}`
-    return dataFormatada
-}
-
 
 lista.forEach(function (tarefa) {
     criaTarefa(tarefa, document.querySelector(`[data-categoria="${tarefa.categoria}"]`))
