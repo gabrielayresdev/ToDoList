@@ -8,6 +8,8 @@
 
     position: absolute;
     left: 0;
+
+    z-index: 10;
 }
 
 /* Apenas pra centralizar as listas */
@@ -80,4 +82,10 @@
 
 .grupo-ativo {
     background: #EEEEEE;
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 70vw;
+    }
 }

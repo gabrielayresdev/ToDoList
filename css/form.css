@@ -126,24 +126,9 @@ button.confirmar:hover {
 
 
 
-
-
-
-
-
-/* Outs */
-
-.out-left {
-    left: -100vw;
-    transition: .5s;
-}
-
-.center-display {
-    left: 0;
-    transition: .5s;
-    width: 100vw;
-}
-
-.invisivel {
-    display: none;
+@media screen and (max-width: 480px) {
+    .flags {
+        left: auto;
+        right: 40%;
+    }
 }

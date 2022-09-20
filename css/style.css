@@ -48,17 +48,17 @@ main {
     flex-grow: 1;
 }
 
-/* Outs */
+/* Animações */
 
 .out-left {
-    left: -100vw;
-    transition: .5s;
+    left: -100vw !important;
+    transition: .5s !important;
 }
 
 .center-display {
-    left: 0;
-    transition: .5s;
-    width: 100vw;
+    left: 0 !important;
+    transition: .5s !important;
+    width: 100vw !important;
 }
 
 .invisivel {
