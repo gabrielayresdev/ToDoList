@@ -55,7 +55,7 @@
 .icone-busca {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 2px;
     transform: translateY(-50%);
 }
 
@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 480px) {
     .input-busca {
-        width: 10%;
+        width: 0;
     }
 
     .input-busca:focus {

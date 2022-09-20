@@ -32,7 +32,7 @@
 <body>
     <!-- =============== HEADER =============== -->
     <header>
-        <nav class="cabecalho">
+        <div class="cabecalho">
             <div class="cabecalho__left">
                 <!-- MENU, HOME, BARRA DE BUSCA -->
                 <i class="fa-solid fa-bars header__icone"></i>
@@ -51,13 +51,13 @@
                 <i class="fa-regular fa-bell header__icone"></i>
                 <div class="profile-picture"><img src="images/generic-prof-pic.png"></div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <!-- =============== MAIN =============== -->
     <main>
         <!-- =============== MENU =============== -->
-        <div class="menu">
+        <nav class="menu">
             <ul class="grupos">
                 <li class="grupo-ativo"><i class="fa-solid fa-inbox"></i>Entrada</li>
                 <li><i class="fa-regular fa-calendar"></i>Hoje</li>
@@ -73,15 +73,21 @@
                     <li><i class="fa-solid fa-circle"></i>pessoal</li>
                 </ul>
             </div>
-        </div>
+        </nav>
         <!-- =============== TAREFAS =============== -->
         <div class="on-display">
             <div class="entrada">
                 <!-- Titulo da categoria -->
-                <div class="entrada__cabecalho">
+                <section class="entrada__cabecalho">
                     <h3>Entrada</h3>
-                    <i class="fa-solid fa-ellipsis"></i>
-                </div>
+                    <span>
+                        <i class="fa-solid fa-ellipsis"></i>
+                        <ul class="entrada__options invisivel">
+                            <li id="deletaEntrada">Apagar todas as tarefas</li>
+                            <li id="marcarEntrada">Marcar todas como lidas</li>
+                        </ul>
+                    </span>
+                </section>
 
                 <!-- Div que irá conter as tarefas armazenadas no localstorage -->
                 <ul class="tarefas">
@@ -89,13 +95,13 @@
                 </ul>
 
                 <!-- Botão para adicionar tarefa -->
-                <div class="tarefasAdd">
+                <section class="tarefasAdd">
                     <i class="fa-solid fa-plus"></i>
                     <p>Adicionar tarefa</p>
-                </div>
+                </section>
 
                 <!-- Form pra adicionar tarefa -->
-                <div class="container invisivel">
+                <section class="container invisivel">
                     <div class="tarefa-form">
                         <input type="text" placeholder="ex: Comprar presentes amanhã às 18:00">
                         <textarea rows="2" placeholder="Descrição"></textarea>
@@ -130,12 +136,12 @@
                         <button class="btn cancelar">Cancelar</button>
                         <button class="btn confirmar">Adicionar Tarefa</button>
                     </div>
-                </div>
+                </section>
                 <!-- Imagem que irá aparecer caso não hajam tarefas -->
-                <div class="sem-tarefas">
+                <section class="sem-tarefas">
                     <img src="images/undraw_pilates_gpdb.png" alt="">
                     <p>Sem tarefas no momento</p>
-                </div>
+                    </secti>
             </div>
         </div>
     </main>
@@ -146,7 +152,10 @@
     <script src="js/tratamentoDeErros.js"></script>
     <script src="js/deletaTarefa.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/realizadas.js"></script>
     <script src="js/busca.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/responsividade.js"></script>
     <script src="js/criaTarefa.js"></script>
 </body>
 

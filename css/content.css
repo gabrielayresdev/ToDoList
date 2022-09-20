@@ -30,8 +30,36 @@
 
 .entrada .entrada__cabecalho i {
     font-size: 25px;
+    cursor: pointer;
 }
 
+/*  */
+.entrada__cabecalho>span {
+    position: relative;
+}
+
+.entrada__options {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+    position: absolute;
+    right: 0;
+
+    width: 200px;
+}
+
+.entrada__options li {
+    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.entrada__options li:hover {
+    background: #ddd;
+}
+
+/*  */
 .tarefasAdd {
     display: flex;
     align-items: center;
@@ -48,9 +76,9 @@
 
 /* tarefas lista */
 
-.tarefas li {
+.tarefas .tarefa {
     display: grid;
-    grid-template-columns: 20px auto;
+    grid-template-columns: 20px auto auto;
     grid-template-rows: repeat(3, auto);
     gap: 5px;
 
@@ -72,23 +100,27 @@
     cursor: pointer;
 
     grid-row: span 3;
-    grid-column: span 1;
 }
 
 .tarefas .check:checked {
     background: #0080ff;
 }
 
-.tarefa__header {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 .tarefas h4 {
     color: var(--texto-secundario);
     font-size: 16px;
     font-weight: 400;
+}
+
+.tarefa>span {
+    /* _grid_ */
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    justify-self: end;
+}
+
+.tarefa i {
+    margin-right: 5px;
 }
 
 .tarefas .delete {
@@ -100,6 +132,11 @@
     color: var(--cabecalho-vermelho);
 
     cursor: pointer;
+
+    /* _grid_ */
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: end;
 }
 
 .tarefas .delete:hover {
@@ -112,13 +149,16 @@
     font-weight: 400;
 }
 
-.tarefa__footer {
-    display: flex;
-    justify-content: space-between;
+.tarefa p:first-child {
+    /* _grid_ */
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.tarefa__footer i {
-    margin-right: 5px;
+.tarefa p:last-child {
+    /* _grid_ */
+    grid-column: 2;
+    grid-row: 3;
 }
 
 /* Select */
@@ -135,46 +175,6 @@
     margin-right: 5px;
 }
 
-/*  */
-
-.grupos-select {
-    position: relative;
-}
-
-.options {
-    width: 100%;
-    max-height: 100px;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    position: absolute;
-    top: 100%;
-    left: 30%;
-    z-index: 10;
-
-    background: #fff;
-}
-
-.option {
-    width: 100%;
-    border-bottom: 1px solid #bbb;
-    padding: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    color: var(--texto-terciario);
-}
-
-.option:hover {
-    background: #ddd;
-}
-
-.option i {
-    margin-right: 5px;
-}
-
-/*  */
 
 
 .entrada .sem-tarefas {
@@ -197,4 +197,5 @@
     .entrada {
         width: 80vw;
     }
+
 }

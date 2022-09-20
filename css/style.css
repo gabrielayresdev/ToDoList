@@ -28,6 +28,8 @@ body {
     flex-direction: column;
     height: 100vh;
     font-size: 14px;
+
+    overflow: hidden;
 }
 
 img {
@@ -63,4 +65,14 @@ main {
 
 .invisivel {
     display: none !important;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.black {
+    color: black;
 }

@@ -56,17 +56,13 @@ function criaTarefa(tarefa, icone) {
     /*                  
                     <li class="tarefa">
                         <input type="checkbox" class="check" />
-                        <div class="tarefa__header">
-                            <h4>Conferência às 15:00 de amanhã</h4>
-                            <i class="fa-regular fa-trash delete"></i>
-                        </div>
+                        <h4>Conferência às 15:00 de amanhã</h4>
+                        <span>
+                            <i class="fa-solid fa-inbox"></i>Entrada
+                        </span>
                         <p>Zoom</p>
-                        <div class="tarefa__footer">
-                            <p>22/09/2022</p>
-                            <span>
-                                <i class="fa-solid fa-inbox"></i>Entrada
-                            </span>
-                        </div>
+                        <p>22/09/2022</p>
+                        <i class="fa-solid fa-trash delete"></i>
                     </li>
     */
 
@@ -83,9 +79,6 @@ function criaTarefa(tarefa, icone) {
 
     /* Linha 1, Colunar 2 */
 
-    const tarefa__header = document.createElement("div")
-    tarefa__header.classList.add("tarefa__header")
-
     const h4 = document.createElement("h4")
     h4.innerHTML = tarefa.nome
 
@@ -94,11 +87,8 @@ function criaTarefa(tarefa, icone) {
 
     /* Funcionalidade de apagar a tarefa */
     lixeira.addEventListener("click", function (event) {
-        apagaTarefa(event.target, tarefa)
+        apagaTarefa(event.target.parentNode, tarefa.id)
     })
-
-    tarefa__header.appendChild(h4)
-    tarefa__header.appendChild(lixeira)
 
     /* Linha 2, coluna 2 */
 
@@ -107,9 +97,6 @@ function criaTarefa(tarefa, icone) {
 
     /* Linha 3, colunar 2 */
 
-    const tarefa__footer = document.createElement("div")
-    tarefa__footer.classList.add("tarefa__footer")
-
     const dataP = document.createElement("p")
     dataP.innerHTML = tarefa.data
 
@@ -117,13 +104,12 @@ function criaTarefa(tarefa, icone) {
     span.appendChild(icone.cloneNode())
     span.innerHTML += tarefa.categoria
 
-    tarefa__footer.appendChild(dataP)
-    tarefa__footer.appendChild(span)
-
     li.appendChild(radio)
-    li.appendChild(tarefa__header)
+    li.appendChild(h4)
+    li.appendChild(span)
     li.appendChild(descricaoP)
-    li.appendChild(tarefa__footer)
+    li.appendChild(dataP)
+    li.appendChild(lixeira)
 
 
     tarefasList.appendChild(li)
@@ -142,3 +128,5 @@ lista.forEach(function (tarefa) {
     criaTarefa(tarefa, document.querySelector(`[data-categoria="${tarefa.categoria}"]`))
 
 })
+
+existemTarefas()
