@@ -1,12 +1,24 @@
 :root {
 
-    --branco: #FFFFFF;
     --branco-transparente: #FFFFFF33;
-    --cabecalho-vermelho: #DB4C3F;
+    --background-header: #DB4C3F;
+    --background-menu: #FAFAFA;
+    --background-hover-cinza: #EEEEEE;
 
-    --texto-principal: #202020;
-    --texto-secundario: #1a1a1a;
-    --texto-terciario: #808080;
+    --text-first: #1a1a1a;
+    --text-second: #202020;
+    --text-third: #808080;
+
+    --border-first: #bbb;
+    --border-second: #ddd;
+    --border-third: #80808050;
+
+    --adicionar-botao: #DB4C3F;
+    --adicionar-hover: #ff4f3f;
+    --lixeira: #DB4C3F;
+    --cancelar-botao: #F5F5F5;
+    --cancelar-hover: #e5e5e5;
+    --checked: #0080ff;
 }
 
 * {
@@ -73,6 +85,25 @@ main {
 
 }
 
+
+/* COLORS */
+
 .black {
     color: black;
+}
+
+.ciano {
+    color: #00e1e1;
+}
+
+.vermelho {
+    color: rgb(255, 0, 0);
+}
+
+.verde-claro {
+    color: #42e742;
+}
+
+.azul-claro {
+    color: #008cff;
 }

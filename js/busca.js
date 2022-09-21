@@ -18,9 +18,4 @@ busca.addEventListener("input", function () {
             tarefa.classList.remove("invisivel")
         })
     }
-    tarefas.forEach(function (tarefa) {
-
-
-
-    })
 })

@@ -15,15 +15,6 @@ options.forEach(function (option) {
         opcaoSelecionada.appendChild(icone.cloneNode())
         opcaoSelecionada.innerHTML += nome
 
-        /* !ALERTA DE GAMBIARRA */
-        /* VOCÊ FOI AVISADO */
-        /*         this.innerHTML = ""
-                this.appendChild(icone)
-                this.innerHTML += nome */
-
         optionsBox.classList.add("invisivel")
     })
 })
-
-
-

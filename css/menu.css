@@ -4,7 +4,7 @@
     padding: 3% 0 0 35px;
     width: 17vw;
     height: 100%;
-    background: #FAFAFA;
+    background: var(--background-menu);
 
     position: absolute;
     left: 0;
@@ -29,13 +29,19 @@
     border-radius: 5px;
 
     font-size: 14px;
-    color: var(--texto-principal);
+    color: var(--text-first);
     cursor: pointer;
 }
 
-.grupos i {
+.grupos li i {
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+.categorias__lista .fa-circle,
+.fa-circle {
+    margin-right: 10px;
+    font-size: 8px;
 }
 
 .fa-inbox {
@@ -58,7 +64,7 @@
     padding: 12px;
 
     font-size: 18px;
-    color: var(--texto-secundario);
+    color: var(--text--second);
 
     cursor: pointer;
 }
@@ -74,18 +80,13 @@
     cursor: pointer;
 }
 
-.categorias__lista li i {
-    margin-right: 10px;
-    font-size: 8px;
-    color: mediumaquamarine;
-}
-
 .grupo-ativo {
-    background: #EEEEEE;
+    background: var(--background-hover-cinza);
 }
 
 @media screen and (max-width: 480px) {
     .menu {
         width: 70vw;
+        padding-left: 10px;
     }
 }

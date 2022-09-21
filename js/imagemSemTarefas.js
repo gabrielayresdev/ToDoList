@@ -8,3 +8,10 @@ function existemTarefas() {
         bannerSemTarefas.classList.remove("invisivel")
     }
 }
+
+const tarefas = document.querySelector(".tarefas")
+const mutationObserver = new MutationObserver(() => {
+    existemTarefas()
+})
+
+mutationObserver.observe(tarefas, { childList: true })

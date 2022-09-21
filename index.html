@@ -36,7 +36,8 @@
             <div class="cabecalho__left">
                 <!-- MENU, HOME, BARRA DE BUSCA -->
                 <i class="fa-solid fa-bars header__icone"></i>
-                <i class="material-symbols-outlined header__icone">home</i>
+                <!-- <i class="fa-solid fa-house header__icone"></i> -->
+                <!-- <i class="material-symbols-outlined header__icone">home</i> -->
                 <div class="search">
                     <input type="text" class="input-busca" placeholder="Buscar" id="busca">
                     <label class="icone-busca" for="busca"><i
@@ -47,7 +48,7 @@
             <div class="cabecalho__right">
                 <!-- NOVA TAREFA, AJUDA, NOTIFICAÇÕES, E FOTO DE PERFIL -->
                 <i class="fa-solid fa-plus header__icone"></i>
-                <i class="material-symbols-outlined header__icone">help</i>
+                <!-- <i class="material-symbols-outlined header__icone">help</i> -->
                 <i class="fa-regular fa-bell header__icone"></i>
                 <div class="profile-picture"><img src="images/generic-prof-pic.png"></div>
             </div>
@@ -59,7 +60,7 @@
         <!-- =============== MENU =============== -->
         <nav class="menu">
             <ul class="grupos">
-                <li class="grupo-ativo"><i class="fa-solid fa-inbox"></i>Entrada</li>
+                <li class="grupo-ativo"><i class="fa-solid fa-inbox" data-icone="Entrada"></i>Entrada</li>
                 <li><i class="fa-regular fa-calendar"></i>Hoje</li>
                 <li><i class="fa-solid fa-calendar-days"></i>Em breve</li>
             </ul>
@@ -70,7 +71,8 @@
                     <h4>Categorias</h4>
                 </div>
                 <ul class="categorias__lista">
-                    <li><i class="fa-solid fa-circle"></i>pessoal</li>
+                    <li><i class="fa-solid fa-circle ciano" data-icone="pessoal"></i>pessoal</li>
+                    <li><i class="fa-solid fa-circle vermelho" data-icone="Trabalho"></i>Trabalho</li>
                 </ul>
             </div>
         </nav>
@@ -107,26 +109,19 @@
                         <textarea rows="2" placeholder="Descrição"></textarea>
                         <span class="grupos-select">
                             <input type="date" id="date">
-                            <span class="btn opcao-selecionada"><i class="fa-solid fa-inbox"
-                                    data-categoria="Entrada"></i>Entrada</span>
+                            <span class="btn opcao-selecionada"><i class="fa-solid fa-inbox"></i>Entrada</span>
                             <ul class="options invisivel">
-                                <li class="option"><i class="fa-solid fa-inbox" data-categoria="Entrada"></i>Entrada
-                                </li>
-                                <li class="option"><i class="fa-solid fa-circle" data-categoria="pessoal"
-                                        style="color: rgb(241, 50, 50);"></i>pessoal</li>
-                                <li class="option"><i class="fa-solid fa-circle" data-categoria="Trabalho"
-                                        style="color: rgb(57, 185, 179);"></i>Trabalho</li>
+                                <li class="option"><i class="fa-solid fa-inbox"></i>Entrada</li>
+                                <li class="option"><i class="fa-solid fa-circle ciano"></i>pessoal</li>
+                                <li class="option"><i class="fa-solid fa-circle vermelho"></i>Trabalho</li>
                             </ul>
                         </span>
                         <span class="prioridade-select">
                             <div class="flagBtn"><i class="fa-regular fa-flag header__icone" data-value="0"></i></div>
                             <div class="flags invisivel">
-                                <i class="fa-solid fa-flag header__icone" data-value="3"
-                                    style="color: rgb(221, 49, 49);"></i>
-                                <i class="fa-solid fa-flag header__icone" data-value="2"
-                                    style="color: rgb(66, 231, 66);"></i>
-                                <i class="fa-solid fa-flag header__icone" data-value="1"
-                                    style="color: rgb(0, 140, 255);"></i>
+                                <i class="fa-solid fa-flag header__icone vermelho" data-value="3"></i>
+                                <i class="fa-solid fa-flag header__icone verde-claro" data-value="2"></i>
+                                <i class="fa-solid fa-flag header__icone azul-claro" data-value="1"></i>
                                 <i class="fa-regular fa-flag header__icone" data-value="0"></i>
                             </div>
                             <i class="fa-regular fa-bell header__icone"></i>
@@ -137,14 +132,16 @@
                         <button class="btn confirmar">Adicionar Tarefa</button>
                     </div>
                 </section>
+
                 <!-- Imagem que irá aparecer caso não hajam tarefas -->
                 <section class="sem-tarefas">
                     <img src="images/undraw_pilates_gpdb.png" alt="">
                     <p>Sem tarefas no momento</p>
-                    </secti>
+                </section>
             </div>
         </div>
     </main>
+
     <script src="js/imagemSemTarefas.js"></script>
     <script src="js/selectGrupo.js"></script>
     <script src="js/menuLateral.js"></script>

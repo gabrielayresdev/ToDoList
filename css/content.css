@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: space-between;
 
-    color: var(--texto-principal);
+    color: var(--text-first);
 }
 
 .entrada .entrada__cabecalho i {
@@ -39,9 +39,10 @@
 }
 
 .entrada__options {
-    background: #fff;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    background: white;
+    border: 1px solid var(--border-second);
+    box-shadow: 0px 0px 10px -3px #000000;
+    overflow: hidden;
 
     position: absolute;
     right: 0;
@@ -50,13 +51,13 @@
 }
 
 .entrada__options li {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border-second);
     padding: 5px;
     cursor: pointer;
 }
 
 .entrada__options li:hover {
-    background: #ddd;
+    background: var(--background-hover-cinza);
 }
 
 /*  */
@@ -65,13 +66,13 @@
     align-items: center;
     gap: 10px;
 
-    color: var(--texto-terciario);
+    color: var(--text-third);
 
     cursor: pointer;
 }
 
 .tarefasAdd i {
-    color: var(--cabecalho-vermelho);
+    color: var(--adicionar-botao);
 }
 
 /* tarefas lista */
@@ -84,7 +85,7 @@
 
     margin-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #80808050;
+    border-bottom: 1px solid var(--border-third);
 }
 
 .tarefas .check {
@@ -94,7 +95,7 @@
     background: white;
     border-radius: 50%;
     vertical-align: middle;
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-second);
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
@@ -103,16 +104,19 @@
 }
 
 .tarefas .check:checked {
-    background: #0080ff;
+    background: var(--checked);
 }
 
 .tarefas h4 {
-    color: var(--texto-secundario);
+    color: var(--text-second);
     font-size: 16px;
     font-weight: 400;
 }
 
 .tarefa>span {
+    display: flex;
+    align-items: center;
+
     /* _grid_ */
     grid-column: 3;
     grid-row: 1 / span 2;
@@ -129,7 +133,7 @@
     border-radius: 3px;
 
     font-size: 15px;
-    color: var(--cabecalho-vermelho);
+    color: var(--adicionar-botao);
 
     cursor: pointer;
 
@@ -140,11 +144,11 @@
 }
 
 .tarefas .delete:hover {
-    background: #ddd;
+    background: var(--background-hover-cinza);
 }
 
 .tarefas p {
-    color: var(--texto-terciario);
+    color: var(--text-third);
     font-size: 14px;
     font-weight: 400;
 }
@@ -165,7 +169,7 @@
 .btn {
     background: transparent;
     border-radius: 5px;
-    border: 1px solid var(--texto-terciario);
+    border: 1px solid var(--text-third);
     padding: 5px;
     cursor: pointer;
     height: 27px;
@@ -179,7 +183,7 @@
 
 .entrada .sem-tarefas {
     text-align: center;
-    color: var(--texto-terciario);
+    color: var(--text-third);
 }
 
 .sem-tarefas img {
@@ -195,7 +199,7 @@
     }
 
     .entrada {
-        width: 80vw;
+        width: 85vw;
     }
 
 }

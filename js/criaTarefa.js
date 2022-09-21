@@ -1,6 +1,4 @@
 const lista = JSON.parse(localStorage.getItem("tarefas")) || []
-existemTarefas()
-
 
 const confirmaBtn = document.querySelector(".confirmar")
 
@@ -28,9 +26,8 @@ confirmaBtn.addEventListener("click", function () {
     const descricao = form.querySelector("textarea").value
     const data = form.querySelector("input[type=date]").value
     const categoria = form.querySelector(".opcao-selecionada").childNodes[1].textContent
-    const iconeCategoria = form.querySelector(`[data-categoria="${categoria}"]`)
+    const iconeCategoria = document.querySelector(`[data-icone="${categoria}"]`)
     const prioridade = form.querySelector(".flagBtn").childNodes[0].getAttribute('data-value')
-
 
     const tarefa = {
         "id": lista.length > 0 ? lista[lista.length - 1].id + 1 : 0,
@@ -46,7 +43,6 @@ confirmaBtn.addEventListener("click", function () {
         criaTarefa(tarefa, iconeCategoria)
         lista.push(tarefa)
         localStorage.setItem("tarefas", JSON.stringify(lista))
-        existemTarefas()
         fechaForm()
     }
 
@@ -65,7 +61,6 @@ function criaTarefa(tarefa, icone) {
                         <i class="fa-solid fa-trash delete"></i>
                     </li>
     */
-
 
     const li = document.createElement("li")
     li.classList.add("tarefa")
@@ -125,8 +120,7 @@ function criaTarefa(tarefa, icone) {
 }
 
 lista.forEach(function (tarefa) {
-    criaTarefa(tarefa, document.querySelector(`[data-categoria="${tarefa.categoria}"]`))
+    criaTarefa(tarefa, document.querySelector(`[data-icone="${tarefa.categoria}"]`))
 
 })
 
-existemTarefas()

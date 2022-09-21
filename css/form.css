@@ -9,7 +9,7 @@
 
 .tarefa-form {
     width: 100%;
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-first);
     border-radius: 10px;
     /* overflow: hidden; */
     padding: 10px;
@@ -24,7 +24,7 @@
 .tarefa-form input[type="text"] {
     font-size: 16px;
     font-weight: 500;
-    color: var(--texto-principal);
+    color: var(--text-first);
 }
 
 .tarefa-form textarea {
@@ -39,15 +39,15 @@
 .tarefa-form input::placeholder,
 .tarefa-form textarea::placeholder {
     font-size: 14px;
-    color: var(--texto-terciario);
+    color: var(--text-third);
     font-weight: 500;
 }
 
 /* Data */
 input[type="date"] {
-    background-color: #0080ff;
+    background-color: var(--checked);
     padding: 3px;
-    color: #ffffff;
+    color: white;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -55,7 +55,7 @@ input[type="date"] {
 }
 
 ::-webkit-calendar-picker-indicator {
-    background-color: #ffffff;
+    background-color: white;
     padding: 3px;
     cursor: pointer;
     border-radius: 3px;
@@ -75,15 +75,16 @@ input[type="date"] {
     top: 110%;
     left: -5%;
 
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-first);
     border-radius: 5px;
-    background: #fff;
+    background: white;
+    box-shadow: 0px 0px 10px -3px #000000;
 
     z-index: 4;
 }
 
 .flags .fa-flag:hover {
-    background: #ddd;
+    background: var(--background-hover-cinza);
 }
 
 
@@ -94,16 +95,16 @@ input[type="date"] {
 }
 
 button.cancelar {
-    background: #F5F5F5;
+    background: var(--cancelar-botao);
     padding: 6px;
     font-weight: 700;
     height: auto;
-    border: 1px solid #bbb;
-    color: #1a1a1a;
+    border: 1px solid var(--border-first);
+    color: var(--text-first);
 }
 
 button.cancelar:hover {
-    background: #e5e5e5;
+    background: var(--cancelar-hover);
 }
 
 button.confirmar {
@@ -111,12 +112,12 @@ button.confirmar {
     padding: 6px;
     font-weight: 700;
     height: auto;
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-first);
     color: white;
 }
 
 button.confirmar:hover {
-    background: #ff4f3f;
+    background: var(--adicionar-hover);
 }
 
 #date {
@@ -131,10 +132,15 @@ button.confirmar:hover {
     gap: 10px;
 }
 
+.opcao-selecionada {
+    display: flex;
+    align-items: center;
+}
+
 .options {
     width: 100%;
     max-height: 100px;
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-first);
     border-radius: 3px;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -144,20 +150,24 @@ button.confirmar:hover {
     left: 30%;
     z-index: 10;
 
-    background: #fff;
+    background: white;
+    box-shadow: 0px 0px 10px -3px black;
 }
 
 .option {
     width: 100%;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid var(--border-first);
     padding: 8px;
     font-size: 14px;
     cursor: pointer;
     color: var(--texto-terciario);
+
+    display: flex;
+    align-items: center;
 }
 
 .option:hover {
-    background: #ddd;
+    background: var(--border-second);
 }
 
 .option i {
@@ -166,8 +176,19 @@ button.confirmar:hover {
 
 
 @media screen and (max-width: 480px) {
-    .flags {
-        left: auto;
-        right: 40%;
+    .options {
+        left: 0;
+    }
+
+    .tarefa-form {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .grupos-select {
+        grid-column: span 2;
+    }
+
+    .prioridade-select {
+        grid-column: span 2;
     }
 }
