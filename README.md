@@ -14,6 +14,17 @@ Essas foram as tecnologias usadas no projeto:
 * CSS3
 * JavaScript
 
+## Funcionalidades
+
+As principais funcionalidades são:
+ - Criar tarefa.
+ - Apagar tarefa.
+ - Pesquisar tarefa.
+ - Marcar tarefa como realizada.
+ - Navegar pelas seções referentes ao tipo da tarefa.
+ - Mudar o tema da página.
+ - Permanência das tarefas após recarregar a página
+
 ## Como usar
 
 ### 1 - Ao acessar o projeto, você verá essa página inicial
@@ -57,18 +68,6 @@ Essas foram as tecnologias usadas no projeto:
 ![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_4.png)
 ![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_7.png)
 ![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_8.png)
-
-## Funcionalidades
-
-As principais funcionalidades são:
- - Criar tarefa.
- - Apagar tarefa.
- - Pesquisar tarefa.
- - Marcar tarefa como realizada.
- - Navegar pelas seções referentes ao tipo da tarefa.
- - Mudar o tema da página.
- - Permanência das tarefas após recarregar a página
-
 
 ## Links
   - Repositório: https://github.com/INeonysI/ToDoList
