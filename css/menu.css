@@ -9,7 +9,11 @@
     position: absolute;
     left: 0;
 
+    color: var(--text-first);
+
     z-index: 10;
+
+    transition: .5s left;
 }
 
 /* Apenas pra centralizar as listas */
@@ -29,7 +33,6 @@
     border-radius: 5px;
 
     font-size: 14px;
-    color: var(--text-first);
     cursor: pointer;
 }
 
@@ -81,7 +84,7 @@
 }
 
 .grupo-ativo {
-    background: var(--background-hover-cinza);
+    background: var(--background-selected);
 }
 
 @media screen and (max-width: 480px) {

@@ -17,4 +17,7 @@ deletaEntrada.addEventListener("click", function () {
 
     lista.splice(0, lista.length)
     localStorage.setItem("tarefas", JSON.stringify(lista))
+
+    const entradaOptions = document.querySelector(".entrada__options")
+    entradaOptions.classList.toggle("invisivel")
 })

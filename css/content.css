@@ -6,6 +6,7 @@
     width: 83vw;
     height: 100%;
     overflow: hidden;
+    transition: .5s;
 }
 
 .entrada {
@@ -15,8 +16,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    transition: .5s;
 }
 
 
@@ -42,6 +41,7 @@
     background: white;
     border: 1px solid var(--border-second);
     box-shadow: 0px 0px 10px -3px #000000;
+    background: var(--background-display);
     overflow: hidden;
 
     position: absolute;
@@ -52,12 +52,13 @@
 
 .entrada__options li {
     border-bottom: 1px solid var(--border-second);
-    padding: 5px;
+    color: var(--text-second);
+    padding: 8px;
     cursor: pointer;
 }
 
 .entrada__options li:hover {
-    background: var(--background-hover-cinza);
+    background: var(--background-hover);
 }
 
 /*  */
@@ -108,7 +109,7 @@
 }
 
 .tarefas h4 {
-    color: var(--text-second);
+    color: var(--text-first);
     font-size: 16px;
     font-weight: 400;
 }
@@ -116,10 +117,12 @@
 .tarefa>span {
     display: flex;
     align-items: center;
+    color: var(--text-second);
 
     /* _grid_ */
     grid-column: 3;
     grid-row: 1 / span 2;
+    align-self: start;
     justify-self: end;
 }
 
@@ -144,22 +147,24 @@
 }
 
 .tarefas .delete:hover {
-    background: var(--background-hover-cinza);
+    background: var(--background-hover);
 }
 
 .tarefas p {
-    color: var(--text-third);
     font-size: 14px;
     font-weight: 400;
 }
 
-.tarefa p:first-child {
+.tarefa p:first-of-type {
+    color: var(--text-second);
+
     /* _grid_ */
     grid-column: 2;
     grid-row: 2;
 }
 
-.tarefa p:last-child {
+.tarefa p:last-of-type {
+    color: var(--text-third);
     /* _grid_ */
     grid-column: 2;
     grid-row: 3;
@@ -169,7 +174,7 @@
 .btn {
     background: transparent;
     border-radius: 5px;
-    border: 1px solid var(--text-third);
+    border: 1px solid var(--border-second);
     padding: 5px;
     cursor: pointer;
     height: 27px;

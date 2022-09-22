@@ -7,4 +7,6 @@ AllDone.addEventListener("click", function () {
             check.checked = true
         }
     })
+    const entradaOptions = document.querySelector(".entrada__options")
+    entradaOptions.classList.toggle("invisivel")
 })

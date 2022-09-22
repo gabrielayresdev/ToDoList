@@ -36,8 +36,10 @@
             <div class="cabecalho__left">
                 <!-- MENU, HOME, BARRA DE BUSCA -->
                 <i class="fa-solid fa-bars header__icone"></i>
-                <!-- <i class="fa-solid fa-house header__icone"></i> -->
-                <!-- <i class="material-symbols-outlined header__icone">home</i> -->
+                <label class="switch" id="switch">
+                    <input type="checkbox" id="darkmode-switch">
+                    <span class="slider round"></span>
+                </label>
                 <div class="search">
                     <input type="text" class="input-busca" placeholder="Buscar" id="busca">
                     <label class="icone-busca" for="busca"><i
@@ -135,7 +137,7 @@
 
                 <!-- Imagem que irá aparecer caso não hajam tarefas -->
                 <section class="sem-tarefas">
-                    <img src="images/undraw_pilates_gpdb.png" alt="">
+                    <img src="images/undraw_pilates_gpdb.svg">
                     <p>Sem tarefas no momento</p>
                 </section>
             </div>
@@ -149,6 +151,7 @@
     <script src="js/tratamentoDeErros.js"></script>
     <script src="js/deletaTarefa.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/darkmode.js"></script>
     <script src="js/realizadas.js"></script>
     <script src="js/busca.js"></script>
     <script src="js/popup.js"></script>

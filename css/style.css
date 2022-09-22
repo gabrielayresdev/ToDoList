@@ -3,7 +3,10 @@
     --branco-transparente: #FFFFFF33;
     --background-header: #DB4C3F;
     --background-menu: #FAFAFA;
-    --background-hover-cinza: #EEEEEE;
+    --background-display: #FFFFFF;
+    --background-hover: #EEEEEE;
+    --background-selected: #EEEEEE;
+
 
     --text-first: #1a1a1a;
     --text-second: #202020;
@@ -31,8 +34,6 @@
     outline: none;
     list-style-type: none;
     border: none;
-
-    transition: .5s;
 }
 
 body {
@@ -40,6 +41,7 @@ body {
     flex-direction: column;
     height: 100vh;
     font-size: 14px;
+    background-color: var(--background-display);
 
     overflow: hidden;
 }

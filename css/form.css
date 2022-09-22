@@ -33,6 +33,8 @@
 
 .tarefa-form input,
 .tarefa-form textarea {
+    background: transparent;
+    color: var(--text-second);
     grid-column: span 2;
 }
 
@@ -46,8 +48,8 @@
 /* Data */
 input[type="date"] {
     background-color: var(--checked);
-    padding: 3px;
     color: white;
+    padding: 3px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -61,9 +63,71 @@ input[type="date"] {
     border-radius: 3px;
 }
 
+#date {
+    height: 27px;
+}
+
+
+.grupos-select {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opcao-selecionada {
+    display: flex;
+    align-items: center;
+
+    background: var(--background-display);
+    color: var(--text-second);
+}
+
+.options {
+    width: 100%;
+    max-height: 100px;
+    border: 1px solid var(--border-first);
+    border-radius: 3px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    z-index: 10;
+
+    background: var(--background-display);
+    color: var(--text-second);
+    box-shadow: 0px 0px 10px -3px black;
+}
+
+.option {
+    width: 100%;
+    border-bottom: 1px solid var(--border-first);
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--texto-terciario);
+
+    display: flex;
+    align-items: center;
+}
+
+.option:hover {
+    background: var(--background-hover);
+}
+
+.option i {
+    margin-right: 5px;
+}
+
 .prioridade-select {
     position: relative;
     display: flex;
+}
+
+.flagBtn {
+    color: var(--text-first);
 }
 
 .flags {
@@ -77,14 +141,19 @@ input[type="date"] {
 
     border: 1px solid var(--border-first);
     border-radius: 5px;
-    background: white;
+    background: var(--background-display);
+    color: var(--text-first);
     box-shadow: 0px 0px 10px -3px #000000;
 
     z-index: 4;
 }
 
 .flags .fa-flag:hover {
-    background: var(--background-hover-cinza);
+    background: var(--background-hover);
+}
+
+.prioridade-select .fa-bell {
+    color: var(--text-first);
 }
 
 
@@ -100,7 +169,7 @@ button.cancelar {
     font-weight: 700;
     height: auto;
     border: 1px solid var(--border-first);
-    color: var(--text-first);
+    color: var(--text-second);
 }
 
 button.cancelar:hover {
@@ -119,61 +188,6 @@ button.confirmar {
 button.confirmar:hover {
     background: var(--adicionar-hover);
 }
-
-#date {
-    height: 27px;
-}
-
-
-.grupos-select {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.opcao-selecionada {
-    display: flex;
-    align-items: center;
-}
-
-.options {
-    width: 100%;
-    max-height: 100px;
-    border: 1px solid var(--border-first);
-    border-radius: 3px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    position: absolute;
-    top: 100%;
-    left: 30%;
-    z-index: 10;
-
-    background: white;
-    box-shadow: 0px 0px 10px -3px black;
-}
-
-.option {
-    width: 100%;
-    border-bottom: 1px solid var(--border-first);
-    padding: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    color: var(--texto-terciario);
-
-    display: flex;
-    align-items: center;
-}
-
-.option:hover {
-    background: var(--border-second);
-}
-
-.option i {
-    margin-right: 5px;
-}
-
 
 @media screen and (max-width: 480px) {
     .options {
