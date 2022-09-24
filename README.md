@@ -1,5 +1,5 @@
 
-<!-- ![Logo of the project](https://github.com/Lucasdfg07/Spotify_clone/blob/master/app/javascript/assets/images/logo.png) -->
+![Logo of the project](https://github.com/INeonysI/ToDoList/blob/main/public/prints/logo.png)
 
 ## ToDoList
 ToDoList é uma aplicação desenvolvida com JavaScript e inspirada no design do app ToDoist. Ele funciona como um gerenciador de tarefas no qual é possível adicionar novas tarefas especificando a data limite para a realização, sua descrição, sua prioridade e seu tipo. Além disso, há a possibilidade de deletar tarefas, marcar as tarefas realizadas e pesquisar por uma tarefa em específico. As alterações na lista de tarefas como adicionar e deletar permanecem salvas no localStorage e permitem que o usuário atualize a página sem perder seus dados. O site também permite alternar entre as seções referentes ao tipo e prazo limite. O site é totalmente responsivo e possui modo claro e escuro.
@@ -49,7 +49,7 @@ As principais funcionalidades são:
 
 ### 6 - Ou alternar entre categorias clicando na categoria desejada no menu lateral
 
-<!-- ![Alternar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_6.png) -->
+![Alternar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_6.png)
 
 ### 7 - Se preferir um tema com cores mais escuras, pode clicar no interruptor ao lado esquerdo da barra de busca no cabeçalho
 
