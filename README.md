@@ -49,7 +49,7 @@ As principais funcionalidades são:
 
 ### 6 - Ou alternar entre categorias clicando na categoria desejada no menu lateral
 
-<!-- ![Alternar]() -->
+<!-- ![Alternar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_6.png) -->
 
 ### 7 - Se preferir um tema com cores mais escuras, pode clicar no interruptor ao lado esquerdo da barra de busca no cabeçalho
 
