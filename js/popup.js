@@ -1,6 +1,8 @@
-const entradaOptionsBtn = document.querySelector(".fa-ellipsis")
+const secaoOptionsBtn = document.querySelectorAll(".fa-ellipsis")
+const entradaOptions = document.querySelectorAll(".entrada__options")
 
-entradaOptionsBtn.addEventListener("click", function () {
-    const entradaOptions = document.querySelector(".entrada__options")
-    entradaOptions.classList.toggle("invisivel")
+secaoOptionsBtn.forEach((secaoOptions, index) => {
+    secaoOptions.addEventListener("click", function () {
+        entradaOptions[index].classList.toggle("invisivel")
+    })
 })

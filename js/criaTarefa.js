@@ -106,8 +106,9 @@ function criaTarefa(tarefa, icone) {
     li.appendChild(dataP)
     li.appendChild(lixeira)
 
-
+    categorizaTarefa(tarefa, li.cloneNode(true))
     tarefasList.appendChild(li)
+
     limpaForm()
     /* 
         <li class="tarefa">

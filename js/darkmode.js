@@ -12,7 +12,6 @@ function transformKey(key) {
 function changeColors(colors) {
     Object.keys(colors).map(function (key) {
         html.style.setProperty(transformKey(key), colors[key])
-        console.log(transformKey(key) + " : " + colors[key])
     })
 }
 

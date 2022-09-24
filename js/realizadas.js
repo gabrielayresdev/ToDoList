@@ -1,12 +1,15 @@
-const AllDone = document.querySelector("#marcarEntrada")
+const allDone = document.querySelectorAll("#marcarSecao")
 
-AllDone.addEventListener("click", function () {
-    const checks = document.querySelectorAll(".check")
-    checks.forEach(function (check) {
-        if (!check.checked) {
-            check.checked = true
-        }
+allDone.forEach((allDoneBtn, index) => {
+    allDoneBtn.addEventListener("click", function () {
+        console.log("oi")
+        const checks = document.querySelectorAll(".check")
+        checks.forEach(function (check) {
+            if (!check.checked) {
+                check.checked = true
+            }
+        })
+        const entradaOptions = document.querySelectorAll(".entrada__options")
+        entradaOptions[index].classList.add("invisivel")
     })
-    const entradaOptions = document.querySelector(".entrada__options")
-    entradaOptions.classList.toggle("invisivel")
 })

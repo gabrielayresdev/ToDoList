@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/tarefa.css">
 </head>
 
 <body>
@@ -62,9 +63,9 @@
         <!-- =============== MENU =============== -->
         <nav class="menu">
             <ul class="grupos">
-                <li class="grupo-ativo"><i class="fa-solid fa-inbox" data-icone="Entrada"></i>Entrada</li>
-                <li><i class="fa-regular fa-calendar"></i>Hoje</li>
-                <li><i class="fa-solid fa-calendar-days"></i>Em breve</li>
+                <li class="grupo-ativo grupo"><i class="fa-solid fa-inbox" data-icone="Entrada"></i>Entrada</li>
+                <li class="grupo"><i class="fa-regular fa-calendar"></i>Hoje</li>
+                <li class="grupo"><i class="fa-solid fa-calendar-days"></i>Em breve</li>
             </ul>
 
             <div class="Categorias">
@@ -73,30 +74,105 @@
                     <h4>Categorias</h4>
                 </div>
                 <ul class="categorias__lista">
-                    <li><i class="fa-solid fa-circle ciano" data-icone="pessoal"></i>pessoal</li>
-                    <li><i class="fa-solid fa-circle vermelho" data-icone="Trabalho"></i>Trabalho</li>
+                    <li class="categoria"><i class="fa-solid fa-circle ciano" data-icone="Pessoal"></i>Pessoal</li>
+                    <li class="categoria"><i class="fa-solid fa-circle vermelho" data-icone="Trabalho"></i>Trabalho</li>
                 </ul>
             </div>
         </nav>
-        <!-- =============== TAREFAS =============== -->
-        <div class="on-display">
-            <div class="entrada">
-                <!-- Titulo da categoria -->
-                <section class="entrada__cabecalho">
-                    <h3>Entrada</h3>
-                    <span>
-                        <i class="fa-solid fa-ellipsis"></i>
-                        <ul class="entrada__options invisivel">
-                            <li id="deletaEntrada">Apagar todas as tarefas</li>
-                            <li id="marcarEntrada">Marcar todas como lidas</li>
-                        </ul>
-                    </span>
-                </section>
 
-                <!-- Div que irá conter as tarefas armazenadas no localstorage -->
-                <ul class="tarefas">
+        <!-- =============== CONTEUDO =============== -->
+        <div class="content">
+            <div class="on-display">
+                <!-- entrada -->
+                <div data-content="Entrada">
+                    <section class="categoria__cabecalho">
+                        <h3>Entrada</h3>
+                        <span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="entrada__options invisivel">
+                                <li id="deletaSecao">Apagar todas as tarefas</li>
+                                <li id="marcarSecao">Marcar todas como lidas</li>
+                            </ul>
+                        </span>
+                    </section>
 
-                </ul>
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="tarefas">
+
+                    </ul>
+                </div>
+                <!-- hoje -->
+                <div class="invisivel" data-content="Hoje">
+                    <section class="categoria__cabecalho">
+                        <h3>Hoje</h3>
+                        <span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="entrada__options invisivel">
+                                <li id="deletaSecao">Apagar todas as tarefas</li>
+                                <li id="marcarSecao">Marcar todas como lidas</li>
+                            </ul>
+                        </span>
+                    </section>
+
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="hoje">
+
+                    </ul>
+                </div>
+                <!-- em breve -->
+                <div class="invisivel" data-content="Em breve">
+                    <section class="categoria__cabecalho">
+                        <h3>Em breve</h3>
+                        <span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="entrada__options invisivel">
+                                <li id="deletaSecao">Apagar todas as tarefas</li>
+                                <li id="marcarSecao">Marcar todas como lidas</li>
+                            </ul>
+                        </span>
+                    </section>
+
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="Em-breve">
+
+                    </ul>
+                </div>
+                <!-- pessoal -->
+                <div class="invisivel" data-content="Pessoal">
+                    <section class="categoria__cabecalho">
+                        <h3>Pessoal</h3>
+                        <span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="entrada__options invisivel">
+                                <li id="deletaSecao">Apagar todas as tarefas</li>
+                                <li id="marcarSecao">Marcar todas como lidas</li>
+                            </ul>
+                        </span>
+                    </section>
+
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="Pessoal">
+
+                    </ul>
+                </div>
+                <!-- trabalho -->
+                <div class="invisivel" data-content="Trabalho">
+                    <section class="categoria__cabecalho">
+                        <h3>Trabalho</h3>
+                        <span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                            <ul class="entrada__options invisivel">
+                                <li id="deletaSecao">Apagar todas as tarefas</li>
+                                <li id="marcarSecao">Marcar todas como lidas</li>
+                            </ul>
+                        </span>
+                    </section>
+
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="Trabalho">
+
+                    </ul>
+                </div>
 
                 <!-- Botão para adicionar tarefa -->
                 <section class="tarefasAdd">
@@ -114,7 +190,7 @@
                             <span class="btn opcao-selecionada"><i class="fa-solid fa-inbox"></i>Entrada</span>
                             <ul class="options invisivel">
                                 <li class="option"><i class="fa-solid fa-inbox"></i>Entrada</li>
-                                <li class="option"><i class="fa-solid fa-circle ciano"></i>pessoal</li>
+                                <li class="option"><i class="fa-solid fa-circle ciano"></i>Pessoal</li>
                                 <li class="option"><i class="fa-solid fa-circle vermelho"></i>Trabalho</li>
                             </ul>
                         </span>
@@ -149,6 +225,8 @@
     <script src="js/menuLateral.js"></script>
     <script src="js/selectPrioridade.js"></script>
     <script src="js/tratamentoDeErros.js"></script>
+    <script src="js/categorias.js"></script>
+    <script src="js/getDate.js"></script>
     <script src="js/deletaTarefa.js"></script>
     <script src="js/form.js"></script>
     <script src="js/darkmode.js"></script>

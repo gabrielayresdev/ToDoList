@@ -1,0 +1,93 @@
+/* tarefas lista */
+
+.tarefa {
+    display: grid;
+    grid-template-columns: 20px auto auto;
+    grid-template-rows: repeat(3, auto);
+    gap: 5px;
+
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-third);
+}
+
+.check {
+
+    width: 1.3em;
+    height: 1.3em;
+    background: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid var(--border-second);
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    grid-row: span 3;
+}
+
+.check:checked {
+    background: var(--checked);
+}
+
+.tarefa h4 {
+    color: var(--text-first);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.tarefa>span {
+    display: flex;
+    align-items: center;
+    color: var(--text-second);
+
+    /* _grid_ */
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: start;
+    justify-self: end;
+}
+
+.tarefa i {
+    margin-right: 5px;
+}
+
+.delete {
+    padding: 5px;
+    align-self: center;
+    border-radius: 3px;
+
+    font-size: 15px;
+    color: var(--adicionar-botao);
+
+    cursor: pointer;
+
+    /* _grid_ */
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: end;
+}
+
+.delete:hover {
+    background: var(--background-hover);
+}
+
+.tarefa p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tarefa p:first-of-type {
+    color: var(--text-second);
+
+    /* _grid_ */
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.tarefa p:last-of-type {
+    color: var(--text-third);
+    /* _grid_ */
+    grid-column: 2;
+    grid-row: 3;
+}
