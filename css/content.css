@@ -1,15 +1,16 @@
 /* =============== TAREFAS =============== */
 
-.on-display {
+.content {
     position: absolute;
     left: 17vw;
     width: 83vw;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     transition: .5s;
+    padding-bottom: 100px;
 }
 
-.entrada {
+.on-display {
     width: 40vw;
     margin: 3em auto;
 
@@ -19,7 +20,7 @@
 }
 
 
-.entrada .entrada__cabecalho {
+.categoria__cabecalho {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,13 +28,13 @@
     color: var(--text-first);
 }
 
-.entrada .entrada__cabecalho i {
+.categoria__cabecalho i {
     font-size: 25px;
     cursor: pointer;
 }
 
 /*  */
-.entrada__cabecalho>span {
+.categoria__cabecalho>span {
     position: relative;
 }
 
@@ -76,99 +77,6 @@
     color: var(--adicionar-botao);
 }
 
-/* tarefas lista */
-
-.tarefas .tarefa {
-    display: grid;
-    grid-template-columns: 20px auto auto;
-    grid-template-rows: repeat(3, auto);
-    gap: 5px;
-
-    margin-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--border-third);
-}
-
-.tarefas .check {
-
-    width: 1.3em;
-    height: 1.3em;
-    background: white;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 1px solid var(--border-second);
-    appearance: none;
-    -webkit-appearance: none;
-    cursor: pointer;
-
-    grid-row: span 3;
-}
-
-.tarefas .check:checked {
-    background: var(--checked);
-}
-
-.tarefas h4 {
-    color: var(--text-first);
-    font-size: 16px;
-    font-weight: 400;
-}
-
-.tarefa>span {
-    display: flex;
-    align-items: center;
-    color: var(--text-second);
-
-    /* _grid_ */
-    grid-column: 3;
-    grid-row: 1 / span 2;
-    align-self: start;
-    justify-self: end;
-}
-
-.tarefa i {
-    margin-right: 5px;
-}
-
-.tarefas .delete {
-    padding: 5px;
-    align-self: center;
-    border-radius: 3px;
-
-    font-size: 15px;
-    color: var(--adicionar-botao);
-
-    cursor: pointer;
-
-    /* _grid_ */
-    grid-column: 3;
-    grid-row: 3;
-    justify-self: end;
-}
-
-.tarefas .delete:hover {
-    background: var(--background-hover);
-}
-
-.tarefas p {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.tarefa p:first-of-type {
-    color: var(--text-second);
-
-    /* _grid_ */
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.tarefa p:last-of-type {
-    color: var(--text-third);
-    /* _grid_ */
-    grid-column: 2;
-    grid-row: 3;
-}
 
 /* Select */
 .btn {
@@ -186,7 +94,7 @@
 
 
 
-.entrada .sem-tarefas {
+.sem-tarefas {
     text-align: center;
     color: var(--text-third);
 }
@@ -198,12 +106,12 @@
 
 
 @media screen and (max-width: 480px) {
-    .on-display {
+    .content {
         left: 0;
         width: 100vw;
     }
 
-    .entrada {
+    .on-display {
         width: 85vw;
     }
 
