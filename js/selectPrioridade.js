@@ -1,13 +1,16 @@
 const flagBtn = document.querySelector(".flagBtn")
 const flagsContainer = document.querySelector(".flags")
 const flags = flagsContainer.querySelectorAll(".fa-flag")
-/* const flagP3 = document.querySelector('[data-value="3"]')
-const flagP2 = document.querySelector('[data-value="2"]')
-const flagP1 = document.querySelector('[data-value="1"]')
-const flagP0 = document.querySelector('[data-value="0"]') */
 
 flagBtn.addEventListener("click", function () {
     flagsContainer.classList.toggle("invisivel")
+})
+
+/* Fecha o popup caso cliquem fora */
+window.addEventListener("click", function (event) {
+    if (event.target != flagBtn && event.target != flagsContainer && event.target != flagBtn.childNodes[0]) {
+        flagsContainer.classList.add("invisivel")
+    }
 })
 
 flags.forEach(function (flag) {
