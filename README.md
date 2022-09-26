@@ -29,45 +29,49 @@ As principais funcionalidades são:
 
 ### 1 - Ao acessar o projeto, você verá essa página inicial
 
-![Homepage image](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_1.png)
+![Homepage image](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_1.png)
 
 ### 2 - Você pode clicar no botão "Adicionar tarefa" ou no + no canto direito do cabeçalho para abrir o formulário para criar sua tarefa
 
-![Abrir Form](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_2.png)
+![Abrir Form](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_2.png)
 
 ### 3 - Após preencher o formulário com ao menos nome e data, clique no botão vermelho "Adicionar Tarefa" para adicionar sua tarefa 
 
-![Adicionar tarefa](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_3.png)
+![Adicionar tarefa](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_3.png)
 
 ### 4 - Para deletar uma tarefa, basta clicar na lixeira da tarefa que você deseja excluir
 
-![Apagar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_4.png)
+![Apagar](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_4.png)
 
 ### 5 - Você também pode pesquisar por uma tarefa ao digitar seu nome na barra de busca no cabeçalho
 
-![Pesquisar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_5.png)
+![Pesquisar](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_5.png)
 
 ### 6 - Ou alternar entre categorias clicando na categoria desejada no menu lateral
 
-![Alternar](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/how_6.png)
+![Alternar](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_6.png)
 
 ### 7 - Se preferir um tema com cores mais escuras, pode clicar no interruptor ao lado esquerdo da barra de busca no cabeçalho
 
-![Tema Escuro](https://github.com/INeonysI/ToDoList/blob/main/public/prints/howToUse/Screenshot_6.png)
+![Tema Escuro](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_7.png)
+
+## 8 - Caso já tenha concluido a tarefa, basta clicar na checkbox ao lado do nome da tarefa
+
+![Concluir](https://github.com/INeonysI/ToDoList/blob/main/public/howToUse/how_8.png)
 
 ## Layout Web
 
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_1.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_2.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_5.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_6.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/web1.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/web2.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/web3.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/web4.png)
 
 ## Layout Mobile
 
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_3.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_4.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_7.png)
-![](https://github.com/INeonysI/ToDoList/blob/main/public/prints/layout/Screenshot_8.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/mobile1.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/mobile2.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/mobile3.png)
+![](https://github.com/INeonysI/ToDoList/blob/main/public/layout/mobile4.png)
 
 ## Links
   - Repositório: https://github.com/INeonysI/ToDoList
