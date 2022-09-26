@@ -51,8 +51,6 @@
             <div class="cabecalho__right">
                 <!-- NOVA TAREFA, AJUDA, NOTIFICAÇÕES, E FOTO DE PERFIL -->
                 <i class="fa-solid fa-plus header__icone"></i>
-                <!-- <i class="material-symbols-outlined header__icone">help</i> -->
-                <i class="fa-regular fa-bell header__icone"></i>
                 <div class="profile-picture"><img src="images/generic-prof-pic.png"></div>
             </div>
         </div>
@@ -66,6 +64,7 @@
                 <li class="grupo-ativo grupo"><i class="fa-solid fa-inbox" data-icone="Entrada"></i>Entrada</li>
                 <li class="grupo"><i class="fa-regular fa-calendar"></i>Hoje</li>
                 <li class="grupo"><i class="fa-solid fa-calendar-days"></i>Em breve</li>
+                <li class="grupo"><i class="fa-solid fa-circle-check ciano"></i>Concluidas</li>
             </ul>
 
             <div class="Categorias">
@@ -137,6 +136,17 @@
 
                     </ul>
                 </div>
+                <!-- Concluidas -->
+                <div class="invisivel" data-content="Concluidas">
+                    <section class="categoria__cabecalho">
+                        <h3>Concluidas</h3>
+                    </section>
+
+                    <!-- lista que irá conter as tarefas armazenadas no localstorage -->
+                    <ul class="Concluidas">
+
+                    </ul>
+                </div>
                 <!-- pessoal -->
                 <div class="invisivel" data-content="Pessoal">
                     <section class="categoria__cabecalho">
@@ -202,7 +212,6 @@
                                 <i class="fa-solid fa-flag header__icone azul-claro" data-value="1"></i>
                                 <i class="fa-regular fa-flag header__icone" data-value="0"></i>
                             </div>
-                            <i class="fa-regular fa-bell header__icone"></i>
                         </span>
                     </div>
                     <div class="buttons-form">
@@ -230,10 +239,10 @@
     <script src="js/deletaTarefa.js"></script>
     <script src="js/form.js"></script>
     <script src="js/darkmode.js"></script>
-    <script src="js/realizadas.js"></script>
     <script src="js/busca.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/responsividade.js"></script>
+    <script src="js/realizadas.js"></script>
     <script src="js/criaTarefa.js"></script>
 </body>
 

@@ -106,10 +106,16 @@ function criaTarefa(tarefa, icone) {
     li.appendChild(dataP)
     li.appendChild(lixeira)
 
-    categorizaTarefa(tarefa, li.cloneNode(true))
-    tarefasList.appendChild(li)
+    if (tarefa.done === false) {
+        categorizaTarefa(tarefa, li.cloneNode(true))
+        tarefasList.appendChild(li)
+    } else if (tarefa.done === true) {
+        criaTarefaConcluida(li)
+    }
 
     limpaForm()
+
+    atribuiFuncaoDeConcluir()
     /* 
         <li class="tarefa">
             <input type="radio" class="check">
@@ -118,6 +124,12 @@ function criaTarefa(tarefa, icone) {
             <p>22/09/2022</p>
         </li>
     */
+}
+
+function criaTarefaConcluida(tarefa) {
+    const tarefasConcluidas = document.querySelector(".Concluidas")
+
+    tarefasConcluidas.appendChild(tarefa)
 }
 
 lista.forEach(function (tarefa) {

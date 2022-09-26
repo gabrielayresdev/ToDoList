@@ -13,7 +13,6 @@ function categorizaTarefa(tarefa, li) {
         const tarefas = categoria.querySelector(`.${tarefa.categoria}`)
         tarefas.appendChild(li.cloneNode(true))
     }
-
 }
 
 function mudaCategoria(nome) {

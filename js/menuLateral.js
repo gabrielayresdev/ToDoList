@@ -21,7 +21,6 @@ grupos.forEach(grupo => {
 categorias.forEach(categoria => {
     categoria.addEventListener("click", () => {
         removeAtivo()
-        console.log(categoria.textContent)
         mudaCategoria(categoria.textContent)
         categoria.classList.add("grupo-ativo")
     })

@@ -47,7 +47,7 @@
 
 /* Data */
 input[type="date"] {
-    background-color: var(--checked);
+    background-color: var(--data);
     color: white;
     padding: 3px;
     border: none;

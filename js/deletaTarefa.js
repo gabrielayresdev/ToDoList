@@ -1,5 +1,8 @@
 function apagaTarefa(elemento, id) {
-    elemento.remove()
+    const elementosADeletar = document.querySelectorAll(`[data-id="${id}"]`)
+    elementosADeletar.forEach(element => {
+        element.remove()
+    })
     const newLista = lista.filter(function (value, index) {
         return value.id != id
     })
