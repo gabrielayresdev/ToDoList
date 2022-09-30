@@ -82,7 +82,7 @@ function criaTarefa(tarefa, icone) {
 
     /* Funcionalidade de apagar a tarefa */
     lixeira.addEventListener("click", function (event) {
-        apagaTarefa(event.target.parentNode, tarefa.id)
+        apagaTarefa(tarefa, tarefa.id)
     })
 
     /* Linha 2, coluna 2 */

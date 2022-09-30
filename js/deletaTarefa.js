@@ -3,10 +3,13 @@ function apagaTarefa(elemento, id) {
     elementosADeletar.forEach(element => {
         element.remove()
     })
-    const newLista = lista.filter(function (value, index) {
-        return value.id != id
-    })
-    localStorage.setItem("tarefas", JSON.stringify(newLista))
+
+    const aux = lista.find(item => item.nome === elemento.nome && item.data === elemento.data)
+    const auxId = lista.indexOf(aux)
+
+    lista.splice(auxId, 1)
+
+    localStorage.setItem("tarefas", JSON.stringify(lista))
 }
 
 const deletaSecao = document.querySelectorAll("#deletaSecao")
